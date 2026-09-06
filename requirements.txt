@@ -1,0 +1,12 @@
+# ===== 核心依赖 =====
+requests>=2.28
+beautifulsoup4>=4.11
+schedule>=1.2
+
+# ===== 可选依赖(按需取消注释) =====
+# 本地浏览器渲染抓取(selenium 方案,需本机装 Chrome/Edge)
+# selenium>=4.15
+# WebVPN 自动登录的密码加密(仅使用 WEBVPN_* 直连中转时需要)
+# pycryptodome>=3.19
+# 经 SOCKS5 代理访问(服务器模式配合 zju-connect 隧道时需要)
+# pysocks>=1.7

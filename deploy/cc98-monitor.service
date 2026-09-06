@@ -1,0 +1,14 @@
+[Unit]
+Description=CC98 Hot Topic Monitor
+After=network-online.target zju-connect.service
+Requires=zju-connect.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/cc98
+ExecStart=/opt/cc98/venv/bin/python -u cc98_hot_monitor.py
+Restart=always
+RestartSec=20
+
+[Install]
+WantedBy=multi-user.target

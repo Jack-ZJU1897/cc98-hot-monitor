@@ -1,0 +1,16 @@
+[Unit]
+Description=ZJU RVPN tunnel (zju-connect)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# 密码请放入 /etc/zju-connect.env (chmod 600),格式:
+#   ZJU_CONNECT_PASSWORD=你的统一认证密码
+EnvironmentFile=/etc/zju-connect.env
+ExecStart=/opt/zju-connect -protocol easyconnect -server rvpn.zju.edu.cn -port 443 -username YOUR_ZJU_ID
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target

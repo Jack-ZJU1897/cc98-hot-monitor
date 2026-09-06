@@ -1,0 +1,32 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+
+# ===== 运行产物(含个人数据,勿提交) =====
+*.log
+cc98_hot_history.json      # 榜单历史/事件
+cc98_status.json           # 运行状态
+cc98_token_cache.json      # CC98 token 缓存(含 refresh_token!)
+cc98_webvpn_cookies.json   # WebVPN 会话 Cookie
+cc98_home_debug.html       # 调试抓取的首页 HTML
+
+# ===== 本地浏览器登录态(勿提交!) =====
+cc98_edge_profile/
+cc98_chrome_profile/
+for_server/                # 个人部署副本目录
+
+# ===== 环境/密钥 =====
+.env
+*.env
+*.bak
+
+# ===== IDE / OS =====
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,13 @@
+[Unit]
+Description=CC98 Monitor Dashboard
+After=network-online.target cc98-monitor.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/cc98
+ExecStart=/opt/cc98/venv/bin/python -u cc98_dashboard.py --no-browser
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
